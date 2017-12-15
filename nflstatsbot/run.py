@@ -3,7 +3,7 @@ from query import StatQuery
 
 
 def run_bot(text_input):
-    query = StatQuery(text_input)
+    return StatQuery(text_input)
 
 
 if __name__ == '__main__':
