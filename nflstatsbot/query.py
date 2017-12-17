@@ -1,6 +1,6 @@
-from enum import Enum, auto
 import logging
 import re
+from enum import Enum, auto
 
 QUERY_PATTERN = '^[a-zA-Z\s]{3,}$'
 
