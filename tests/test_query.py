@@ -1,4 +1,4 @@
-from nflstatsbot.query import StatQuery
+from nflstatsbot import StatQuery
 
 
 def test_valid_query_types():

@@ -13,18 +13,18 @@ class StatQuery(object):
         malformed = auto()
         player = auto()
 
-    def __init__(self, query_text):
+    def __init__(self, query_text: str) -> None:
         self._query_text = query_text
         self._query_type = StatQuery.Type.none if re.match(
             QUERY_PATTERN, self.query_text) is None else StatQuery.Type.player
         logging.debug(f'Query created: {self.query_type}')
 
     @property
-    def query_text(self):
+    def query_text(self) -> str:
         """The text content of the query"""
         return self._query_text
 
     @property
-    def query_type(self):
+    def query_type(self) -> Type:
         """The type of user query: one of none, malformed, player"""
         return self._query_type

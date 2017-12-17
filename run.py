@@ -1,5 +1,5 @@
 import logging
-from query import StatQuery
+from nflstatsbot import *
 
 
 def run_bot(text_input):
