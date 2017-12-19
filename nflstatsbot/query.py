@@ -14,10 +14,11 @@ class StatQuery(object):
         player = auto()
 
     def __init__(self, query_text: str) -> None:
+        self.logger = logging.getLogger(__name__)
         self._query_text = query_text
         self._query_type = StatQuery.Type.none if re.match(
             QUERY_PATTERN, self.query_text) is None else StatQuery.Type.player
-        logging.debug(f'Query created: {self.query_type}')
+        self.logger.info(f'Query created: {self.query_type}')
 
     @property
     def query_text(self) -> str:
